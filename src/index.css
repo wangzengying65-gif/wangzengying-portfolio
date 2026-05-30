@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-apple-white: #FFFFFF;
+  --color-apple-gray: #F5F5F7;
+  --color-apple-black: #1D1D1F;
+  --color-apple-dark-bg: #000000;
+  --color-apple-dark-card: #1C1C1E;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-apple-white);
+    color: var(--color-apple-black);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .dark body {
+    background-color: var(--color-apple-dark-bg);
+    color: var(--color-apple-white);
+  }
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@utility glass-dark {
+  background: rgba(28, 28, 30, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
